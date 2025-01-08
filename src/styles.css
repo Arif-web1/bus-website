@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+/* font start */
+.inter {
+  font-family: "Inter", serif;
+  font-optical-sizing: auto;
+  font-weight:100;
+  font-style: normal;
+}
+.ralway {
+  font-family: "Raleway", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+/* font end */
+
+.button {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #d4f8d4; /* Light green background */
+  color: #28a745; /* Green text */
+  /* border: 1px solid #28a745; Green border */
+  border-radius: 8px; /* Rounded corners */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+/* default color */
+.green {
+  background-color: #1dd100 !important;
+}
+
+.color-green {
+  color: #1dd100;
+}
