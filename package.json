@@ -2,7 +2,7 @@
   "name": "bus-website",
   "version": "1.0.0",
   "scripts": {
-    "build:css": "tailwindcss -i ./src/styles.css -o ./dist/output.css --watch"
+    "dev": "tailwindcss -i ./src/styles.css -o ./dist/output.css --watch"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.20",
