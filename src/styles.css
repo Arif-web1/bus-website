@@ -36,3 +36,20 @@
 .color-green {
   color: #1dd100;
 }
+
+.bg-seat{
+  background-color:#e0e6e6;
+  padding: 17px 5px;
+  border-radius: 15px;
+  text-align: center;
+
+}
+
+.customize{
+
+  /* background-color: burlywood; */
+  padding: 17px 5px;
+  text-align: right;
+  border-radius: 15px;
+
+}
