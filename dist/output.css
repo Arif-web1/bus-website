@@ -944,6 +944,10 @@ video {
   background-image: url('/src/images/banner.png');
 }
 
+.bg-\[url\(\'https\:\/\/raw\.githubusercontent\.com\/Arif-web1\/bus-website\/refs\/heads\/main\/src\/images\/banner\.png\'\)\] {
+  background-image: url('https://raw.githubusercontent.com/Arif-web1/bus-website/refs/heads/main/src/images/banner.png');
+}
+
 .bg-no-repeat {
   background-repeat: no-repeat;
 }
