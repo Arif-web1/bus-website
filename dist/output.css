@@ -1047,6 +1047,10 @@ video {
   padding-right: 1rem;
 }
 
+.ps-10 {
+  padding-inline-start: 2.5rem;
+}
+
 .ps-2 {
   padding-inline-start: 0.5rem;
 }
@@ -1085,6 +1089,10 @@ video {
 
 .pt-8 {
   padding-top: 2rem;
+}
+
+.ps-5 {
+  padding-inline-start: 1.25rem;
 }
 
 .text-center {
@@ -1280,6 +1288,10 @@ video {
   padding: 17px 5px;
   border-radius: 15px;
   text-align: center;
+}
+
+html{
+  scroll-behavior: smooth;
 }
 
 .hover\:bg-green-600:hover {

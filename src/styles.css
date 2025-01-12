@@ -58,5 +58,7 @@
   padding: 17px 5px;
   border-radius: 15px;
   text-align: center;
-
+}
+html{
+  scroll-behavior: smooth;
 }
