@@ -940,10 +940,6 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
 }
 
-.bg-\[url\(\'\/src\/images\/banner\.png\'\)\] {
-  background-image: url('/src/images/banner.png');
-}
-
 .bg-\[url\(\'https\:\/\/raw\.githubusercontent\.com\/Arif-web1\/bus-website\/refs\/heads\/main\/src\/images\/banner\.png\'\)\] {
   background-image: url('https://raw.githubusercontent.com/Arif-web1/bus-website/refs/heads/main/src/images/banner.png');
 }
@@ -1210,12 +1206,6 @@ video {
   opacity: 0.6;
 }
 
-.shadow-lg {
-  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
 .shadow-md {
   --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
@@ -1283,6 +1273,13 @@ video {
   padding: 17px 5px;
   text-align: right;
   border-radius: 15px;
+}
+
+.green-seat{
+  background-color:#1DD100;
+  padding: 17px 5px;
+  border-radius: 15px;
+  text-align: center;
 }
 
 .hover\:bg-green-600:hover {
