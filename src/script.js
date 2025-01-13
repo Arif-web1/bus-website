@@ -1,5 +1,3 @@
-
-
 // click the seat the functiom will be start from here=document.getElementsByClassName('bg-seat');
 const seat_selection = document.querySelectorAll(".bg-seat");
 
@@ -13,7 +11,6 @@ function single_seat_selection(event) {
   if (value <= 3) {
     select_seat_green(event.target);
     selectedSeatCount(event.target);
-    
   } else {
     alert("You cant select more than 4 seats at a time");
   }
@@ -35,6 +32,7 @@ function selectedSeatCount(click_seat) {
   value++;
   countSeat.innerText = value;
   total_money(value);
+  enable_apply_button(value);
 }
 // REMAIN SEAT
 function remain_seat(remain_value) {
@@ -62,8 +60,6 @@ function create_economy(click_seat) {
   new_seat.appendChild(new_span);
   new_seat.appendChild(new_span2);
   new_seat.appendChild(new_span3);
- 
-
 }
 // total money
 
@@ -75,42 +71,45 @@ function total_money(ticket_Quantity) {
 
 // next button enable
 
-  const bangladeshiPhoneRegex = /^(?:\+8801|01)[3-9]\d{8}$/;
-const main_page=document.getElementById('main-page');
-const succes_page=document.getElementById('success-page');
-const footer=document.getElementById('footer')
+const bangladeshiPhoneRegex = /^(?:\+8801|01)[3-9]\d{8}$/;
+const main_page = document.getElementById("main-page");
+const succes_page = document.getElementById("success-page");
+const footer = document.getElementById("footer");
 
 function next_button_enable(click) {
-  const phn_num=document.getElementById('phoneNumber');
+  const phn_num = document.getElementById("phoneNumber");
 
-// bangladesi number validity
-phn_num.addEventListener('keyup',function (e) {
-  const phn_user_input=e.target.value;
- 
-  if (bangladeshiPhoneRegex.test(e.target.value)) {
-    
- buttton_will_enable();
-  } else {
-    console.log('unvalid');
-    
-  }
-  
-})
+  // bangladesi number validity
+  phn_num.addEventListener("keyup", function (e) {
+    const phn_user_input = e.target.value;
 
+    if (bangladeshiPhoneRegex.test(e.target.value)) {
+      buttton_will_enable();
+    } else {
+      console.log("unvalid");
+    }
+  });
 }
 function buttton_will_enable(params) {
-  const button_enable=document.getElementById('last-button');
-  button_enable.removeAttribute('disabled')
-  button_enable.addEventListener('click',function (e) {
-    main_page.classList.add('hidden');
-    footer.classList.add('hidden');
-    succes_page.classList.remove('hidden');
-  })
-  
+  const button_enable = document.getElementById("last-button");
+  button_enable.removeAttribute("disabled");
+  button_enable.addEventListener("click", function (e) {
+    main_page.classList.add("hidden");
+    footer.classList.add("hidden");
+    succes_page.classList.remove("hidden");
+  });
 }
 // enable apply button
-function enable_apply_button(params) {
-  const apply_button=document.getElementById('apply-button');
-  console.log(apply_button);
-  
+function enable_apply_button(ticket_Quantity) {
+  const apply_button = document.getElementById("apply-button");
+  if (ticket_Quantity==4) {
+    apply_button.removeAttribute("disabled");
+    coupon_code_game();
+    
+  } else {
+    console.log('ticket quantity less then four');
+    
+  }
 }
+
+// coupon code benifit start
