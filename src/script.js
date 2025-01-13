@@ -119,7 +119,22 @@ function coupon_code_game(params) {
   const coupon_area= document.getElementById("coupon");
   coupon_area.addEventListener('keyup',function (e) {
     const input_value=e.target.value;
-    console.log(input_value);
+    apply_button.addEventListener('click',function() {
+      
+    if (input_value==new15Element) {
+      discount15();
+    } 
+    else if(input_value==Couple20Element){
+discount20()
+    }
+    else {
+      console.log("wrong coupon ");
+      
+    }
+    })
+    
+    
+    
 
   
     
@@ -127,7 +142,29 @@ function coupon_code_game(params) {
 
   
 }
-// const total_money_place = document.getElementById("total-money").innerText;
-// const total_money = parseInt(total_money_place);
-// const new15Element = document.getElementById("new15").innerText;
-// const Couple20Element = document.getElementById("Couple20").innerText;
+
+
+const new15Element = document.getElementById("new15").innerText;
+const Couple20Element = document.getElementById("Couple20").innerText;
+const apply_button = document.getElementById("apply-button");
+const grand_total=document.getElementById('grand-total');
+// discount 15%
+function discount15(params) {
+  // console.log(total_moneys);
+  const total_money_place = document.getElementById("total-money").innerText;
+const total_money = parseInt(total_money_place);
+const discount15=(total_money*15)/100;
+const discount_price=total_money-discount15;
+grand_total.innerText=discount_price;
+
+  
+}
+
+// discount 20%
+function discount20(params) {
+  const total_money_place = document.getElementById("total-money").innerText;
+  const total_money = parseInt(total_money_place);
+  const discount20=(total_money*20)/100;
+  const discount_price=total_money-discount20;
+  grand_total.innerText=discount_price;
+}
