@@ -20,9 +20,11 @@ function single_seat_selection(event) {
 // make select seat green
 function select_seat_green(click_seat) {
   click_seat.classList.add("green-seat");
+  click_seat.style.pointerEvents = 'none';
 
   create_economy(click_seat);
   next_button_enable(click_seat);
+
 }
 
 // seat select
@@ -162,3 +164,4 @@ function discount20(params) {
   const discount_price = total_money - discount20;
   grand_total.innerText = discount_price;
 }
+// disable select
