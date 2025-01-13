@@ -102,14 +102,32 @@ function buttton_will_enable(params) {
 // enable apply button
 function enable_apply_button(ticket_Quantity) {
   const apply_button = document.getElementById("apply-button");
-  if (ticket_Quantity==4) {
+  if (ticket_Quantity == 4) {
     apply_button.removeAttribute("disabled");
+
+    console.log(apply_button);
+    
     coupon_code_game();
-    
   } else {
-    console.log('ticket quantity less then four');
-    
+    console.log("ticket quantity less then four");
   }
 }
 
 // coupon code benifit start
+function coupon_code_game(params) {
+ 
+  const coupon_area= document.getElementById("coupon");
+  coupon_area.addEventListener('keyup',function (e) {
+    const input_value=e.target.value;
+    console.log(input_value);
+
+  
+    
+  })
+
+  
+}
+// const total_money_place = document.getElementById("total-money").innerText;
+// const total_money = parseInt(total_money_place);
+// const new15Element = document.getElementById("new15").innerText;
+// const Couple20Element = document.getElementById("Couple20").innerText;
