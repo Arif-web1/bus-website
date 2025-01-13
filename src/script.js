@@ -106,7 +106,7 @@ function enable_apply_button(ticket_Quantity) {
     apply_button.removeAttribute("disabled");
 
     console.log(apply_button);
-    
+
     coupon_code_game();
   } else {
     console.log("ticket quantity less then four");
@@ -115,56 +115,50 @@ function enable_apply_button(ticket_Quantity) {
 
 // coupon code benifit start
 function coupon_code_game(params) {
- 
-  const coupon_area= document.getElementById("coupon");
-  coupon_area.addEventListener('keyup',function (e) {
-    const input_value=e.target.value;
-    apply_button.addEventListener('click',function() {
-      
-    if (input_value==new15Element) {
-      discount15();
-    } 
-    else if(input_value==Couple20Element){
-discount20()
-    }
-    else {
-      console.log("wrong coupon ");
-      
-    }
-    })
-    
-    
-    
-
-  
-    
-  })
-
-  
+  const coupon_area = document.getElementById("coupon");
+  coupon_area.addEventListener("keyup", function (e) {
+    const input_value = e.target.value;
+    apply_button.addEventListener("click", function () {
+      if (input_value == new15Element) {
+        discount15();
+      } else if (input_value == Couple20Element) {
+        discount20();
+      } else {
+        console.log("wrong coupon ");
+      }
+    });
+  });
 }
-
 
 const new15Element = document.getElementById("new15").innerText;
 const Couple20Element = document.getElementById("Couple20").innerText;
 const apply_button = document.getElementById("apply-button");
-const grand_total=document.getElementById('grand-total');
+const grand_total = document.getElementById("grand-total");
+const new_div = document.getElementById("contain");
+console.log(new_div);
+
 // discount 15%
 function discount15(params) {
   // console.log(total_moneys);
   const total_money_place = document.getElementById("total-money").innerText;
-const total_money = parseInt(total_money_place);
-const discount15=(total_money*15)/100;
-const discount_price=total_money-discount15;
-grand_total.innerText=discount_price;
-
-  
+  const total_money = parseInt(total_money_place);
+  const discount15 = (total_money * 15) / 100;
+  const discount_price = total_money - discount15;
+  grand_total.innerText = discount_price;
+  const newp2 = document.createElement("p");
+  newp2.innerText = "discount";
+  const newp = document.createElement("p");
+  newp.innerText = discount15;
+  new_div.appendChild(newp2);
+  new_div.appendChild(newp);
+  apply_button.classList.add('hidden')
 }
 
 // discount 20%
 function discount20(params) {
   const total_money_place = document.getElementById("total-money").innerText;
   const total_money = parseInt(total_money_place);
-  const discount20=(total_money*20)/100;
-  const discount_price=total_money-discount20;
-  grand_total.innerText=discount_price;
+  const discount20 = (total_money * 20) / 100;
+  const discount_price = total_money - discount20;
+  grand_total.innerText = discount_price;
 }
