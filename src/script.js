@@ -126,7 +126,7 @@ function coupon_code_game(params) {
       } else if (input_value == Couple20Element) {
         discount20();
       } else {
-        console.log("wrong coupon ");
+        alert('invalid coupon code')
       }
     });
   });
